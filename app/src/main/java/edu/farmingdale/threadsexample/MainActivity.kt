@@ -20,27 +20,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             ThreadsExampleTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting("Android", Modifier.padding(innerPadding))
+
+                    FibonacciDemoNoBgThrd()
+
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-// ToDo 1: Call `FibonacciDemoNoBgThrd` that calculates the Fibonacci number of a given number.
-// ToDo 2: Create a composable function called `FibonacciDemoWithCoroutine` that calculates the
-//  Fibonacci number of a given number using a coroutine.
-// ToDo 3: Start the application using the CountDownActivity
-// ToDo 4: Make the Text of the timer larger
-// ToDo 5: Show a visual indicator of the timer going down to 0
-// ToDo 6: Add a button to rest the timer
-// ToDo 7: Play a sound when the timer reaches 0
-// ToDo 8: During the last 10 seconds, make the text red and bold
